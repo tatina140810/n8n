@@ -632,6 +632,44 @@
             color: var(--text-muted);
             font-size: 14px;
         }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            color: white;
+            background: var(--accent-gradient);
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .nav-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-socials {
+                display: none;
+            }
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
     </style>
 </head>
 
@@ -641,7 +679,28 @@
     <nav id="navbar">
         <div class="container nav-inner">
             <a href="#" class="logo">Auto<span class="highlight">Sync</span></a>
-            <a href="#audit" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">Бесплатный аудит</a>
+            <div style="display: flex; gap: 16px; align-items: center;">
+                <div class="nav-socials">
+                    <a href="https://t.me/Autosynccc" target="_blank" class="social-icon" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 2L11 13"></path>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/auto.syncai?igsh=MWV1NmZwMzRkcHpxaA%3D%3D&utm_source=qr"
+                        target="_blank" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+                <a href="#audit" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">Бесплатный
+                    аудит</a>
+            </div>
         </div>
     </nav>
 
@@ -1131,6 +1190,24 @@
 
     <footer>
         <div class="container">
+            <div class="footer-socials">
+                <a href="https://t.me/Autosynccc" target="_blank" class="social-icon" aria-label="Telegram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2L11 13"></path>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/auto.syncai?igsh=MWV1NmZwMzRkcHpxaA%3D%3D&utm_source=qr"
+                    target="_blank" class="social-icon" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
             <p>© 2026 AutoSync. Все права защищены. Помогаем бизнесу расти быстрее.</p>
         </div>
     </footer>
