@@ -206,13 +206,15 @@
 
         .hero-bg {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 0;
+            left: 0;
             width: 100vw;
             height: 100vh;
-            z-index: -1;
-            overflow: hidden;
+            z-index: -2;
+            background: linear-gradient(to bottom, rgba(10, 14, 23, 0.5) 0%, rgba(10, 14, 23, 1) 100%), url('hero.png') center/cover no-repeat;
+            opacity: 0.7;
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
         }
 
         .hero-gradient {
@@ -220,11 +222,12 @@
             width: 800px;
             height: 800px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 40%, rgba(10, 14, 23, 0) 70%);
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(139, 92, 246, 0.15) 30%, rgba(10, 14, 23, 0) 70%);
             top: 0%;
             left: 50%;
             transform: translate(-50%, -20%);
             animation: pulse-slow 8s infinite alternate ease-in-out;
+            z-index: -1;
         }
 
         @keyframes pulse-slow {
@@ -268,16 +271,7 @@
             margin-bottom: 64px;
         }
 
-        .hero-image-wrapper {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            border-radius: var(--radius-lg);
-            padding: 8px;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
-            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
-            animation: float 6s ease-in-out infinite;
-        }
+
 
         .hero-image {
             width: 100%;
@@ -653,22 +647,15 @@
 
     <!-- 1. Hero Section -->
     <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content reveal">
-                <h1>Автоматизируем бизнес-процессы и сокращаем ручную работу <span class="highlight">до 60%</span></h1>
-                <p>Ускоряем обработку заявок, связываем все сервисы вместе и создаем слаженную систему, которая работает
-                    без вашего постоянного контроля.</p>
-                <div class="hero-btns">
-                    <a href="#audit" class="btn btn-primary">Получить бесплатный аудит</a>
-                    <a href="#cases" class="btn btn-secondary">Посмотреть примеры</a>
-                </div>
-            </div>
-
-            <div class="hero-image-wrapper reveal delay-2">
-                <img src="hero.png" alt="Панель управления автоматизацией бизнеса" class="hero-image glass-card">
+        <div class="hero-bg"></div>
+        <div class="hero-gradient"></div>
+        <div class="container hero-content reveal">
+            <h1>Автоматизируем бизнес-процессы и сокращаем ручную работу <span class="highlight">до 60%</span></h1>
+            <p>Ускоряем обработку заявок, связываем все сервисы вместе и создаем слаженную систему, которая работает
+                без вашего постоянного контроля.</p>
+            <div class="hero-btns">
+                <a href="#audit" class="btn btn-primary">Получить бесплатный аудит</a>
+                <a href="#cases" class="btn btn-secondary">Посмотреть примеры</a>
             </div>
         </div>
     </section>
