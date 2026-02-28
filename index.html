@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Автоматизация бизнес-процессов | Освободите время для роста</title>
-    <meta name="description" content="Ускоряем обработку заявок, связываем сервисы и создаем систему автоматизации, которая работает без вашего контроля. Сокращаем ручную работу до 60%.">
-    
+    <meta name="description"
+        content="Ускоряем обработку заявок, связываем сервисы и создаем систему автоматизации, которая работает без вашего контроля. Сокращаем ручную работу до 60%.">
+
     <!-- Fonts: Inter & Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --bg-dark: #0a0e17;
@@ -48,7 +52,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Manrope', sans-serif;
             font-weight: 700;
             line-height: 1.2;
@@ -142,9 +149,17 @@
             transform: translateY(0);
         }
 
-        .delay-1 { transition-delay: 0.1s; }
-        .delay-2 { transition-delay: 0.2s; }
-        .delay-3 { transition-delay: 0.3s; }
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
 
         /* Navigation */
         nav {
@@ -156,7 +171,7 @@
             padding: 24px 0;
             transition: padding 0.3s, background 0.3s, backdrop-filter 0.3s;
         }
-        
+
         nav.scrolled {
             padding: 16px 0;
             background: rgba(10, 14, 23, 0.8);
@@ -205,7 +220,7 @@
             width: 800px;
             height: 800px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(139,92,246,0.1) 40%, rgba(10,14,23,0) 70%);
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 40%, rgba(10, 14, 23, 0) 70%);
             top: 0%;
             left: 50%;
             transform: translate(-50%, -20%);
@@ -213,18 +228,27 @@
         }
 
         @keyframes pulse-slow {
-            0% { transform: translate(-50%, -20%) scale(1); opacity: 0.8; }
-            100% { transform: translate(-50%, -10%) scale(1.1); opacity: 1; }
+            0% {
+                transform: translate(-50%, -20%) scale(1);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translate(-50%, -10%) scale(1.1);
+                opacity: 1;
+            }
         }
 
         .hero-content {
             max-width: 900px;
             text-align: center;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
-            font-size: clamp(40px, 6vw, 72px);
+            font-size: clamp(40px, 5.5vw, 64px);
             letter-spacing: -1.5px;
             margin-bottom: 24px;
         }
@@ -241,6 +265,40 @@
             gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 64px;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
+            padding: 8px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: calc(var(--radius-lg) - 4px);
+            border: 1px solid var(--glass-border);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         /* Problem Section */
@@ -262,7 +320,7 @@
             width: 48px;
             height: 48px;
             border-radius: 12px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -312,9 +370,19 @@
         }
 
         @keyframes slideRight {
-            0% { transform: translateX(-10px); opacity: 0; }
-            50% { opacity: 0.8; }
-            100% { transform: translateX(10px); opacity: 0; }
+            0% {
+                transform: translateX(-10px);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateX(10px);
+                opacity: 0;
+            }
         }
 
         /* Results */
@@ -496,8 +564,11 @@
 
         .final-cta-bg {
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at center, rgba(139,92,246,0.15) 0%, rgba(10,14,23,1) 100%);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, rgba(10, 14, 23, 1) 100%);
             z-index: -1;
         }
 
@@ -506,9 +577,17 @@
         }
 
         @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
-            70% { box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
         }
 
         /* Headers block */
@@ -527,7 +606,7 @@
             font-size: 18px;
             color: var(--text-muted);
         }
-        
+
         /* Security */
         .security-grid {
             display: grid;
@@ -535,7 +614,7 @@
             gap: 24px;
             margin-top: 64px;
         }
-        
+
         .security-card {
             text-align: center;
             padding: 40px 24px;
@@ -561,6 +640,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -576,12 +656,19 @@
         <div class="hero-bg">
             <div class="hero-gradient"></div>
         </div>
-        <div class="container hero-content reveal">
-            <h1>Автоматизируем бизнес-процессы и сокращаем ручную работу <span class="highlight">до 60%</span></h1>
-            <p>Ускоряем обработку заявок, связываем все сервисы вместе и создаем слаженную систему, которая работает без вашего постоянного контроля.</p>
-            <div class="hero-btns">
-                <a href="#audit" class="btn btn-primary">Получить бесплатный аудит</a>
-                <a href="#cases" class="btn btn-secondary">Посмотреть примеры</a>
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1>Автоматизируем бизнес-процессы и сокращаем ручную работу <span class="highlight">до 60%</span></h1>
+                <p>Ускоряем обработку заявок, связываем все сервисы вместе и создаем слаженную систему, которая работает
+                    без вашего постоянного контроля.</p>
+                <div class="hero-btns">
+                    <a href="#audit" class="btn btn-primary">Получить бесплатный аудит</a>
+                    <a href="#cases" class="btn btn-secondary">Посмотреть примеры</a>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper reveal delay-2">
+                <img src="hero.png" alt="Панель управления автоматизацией бизнеса" class="hero-image glass-card">
             </div>
         </div>
     </section>
@@ -595,31 +682,54 @@
         <div class="problem-grid">
             <div class="glass-card problem-card reveal delay-1">
                 <div class="icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
                 </div>
                 <h3>Рутина съедает время</h3>
-                <p class="text-muted" style="color: var(--text-muted)">Сотрудники тратят часы на перенос данных из одной таблицы в другую вместо реальной работы.</p>
+                <p class="text-muted" style="color: var(--text-muted)">Сотрудники тратят часы на перенос данных из одной
+                    таблицы в другую вместо реальной работы.</p>
             </div>
             <div class="glass-card problem-card reveal delay-2">
                 <div class="icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                        </path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
                 </div>
                 <h3>Заявки теряются</h3>
-                <p class="text-muted" style="color: var(--text-muted)">Клиенты ждут ответа часами. Нет системы мгновенной фиксации лидов. Вы теряете деньги.</p>
+                <p class="text-muted" style="color: var(--text-muted)">Клиенты ждут ответа часами. Нет системы
+                    мгновенной фиксации лидов. Вы теряете деньги.</p>
             </div>
             <div class="glass-card problem-card reveal delay-3">
                 <div class="icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
                 </div>
                 <h3>Ошибки сотрудников</h3>
-                <p class="text-muted" style="color: var(--text-muted)">Человеческий фактор: забыли отправить письмо, перепутали счет или не сменили статус заказа.</p>
+                <p class="text-muted" style="color: var(--text-muted)">Человеческий фактор: забыли отправить письмо,
+                    перепутали счет или не сменили статус заказа.</p>
             </div>
             <div class="glass-card problem-card reveal delay-1">
                 <div class="icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
                 </div>
                 <h3>Разрозненные сервисы</h3>
-                <p class="text-muted" style="color: var(--text-muted)">CRM, мессенджеры, почта и платежные системы не связаны между собой и работают изолированно.</p>
+                <p class="text-muted" style="color: var(--text-muted)">CRM, мессенджеры, почта и платежные системы не
+                    связаны между собой и работают изолированно.</p>
             </div>
         </div>
     </section>
@@ -631,43 +741,64 @@
                 <h2>Как работает автоматизация?</h2>
                 <p>Мы настраиваем невидимые алгоритмы, которые связывают ваши инструменты и берут рутину на себя.</p>
             </div>
-            
+
             <div class="process-diagram reveal">
                 <div class="process-step">
                     <div class="glass-card">
                         <div class="icon-box" style="margin: 0 auto 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
                         </div>
                         <h3>Событие</h3>
-                        <p style="color: var(--text-muted); font-size: 14px; margin-top: 8px;">Клиент оставляет заявку на сайте или пишет в чат</p>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-top: 8px;">Клиент оставляет заявку
+                            на сайте или пишет в чат</p>
                     </div>
                 </div>
-                
+
                 <div class="process-arrow">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
                 </div>
-                
+
                 <div class="process-step">
                     <div class="glass-card">
                         <div class="icon-box" style="margin: 0 auto 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
                         </div>
                         <h3>Логика</h3>
-                        <p style="color: var(--text-muted); font-size: 14px; margin-top: 8px;">Система маршрутизирует данные и принимает решения</p>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-top: 8px;">Система маршрутизирует
+                            данные и принимает решения</p>
                     </div>
                 </div>
 
                 <div class="process-arrow">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
                 </div>
 
                 <div class="process-step">
-                    <div class="glass-card" style="background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3);">
-                        <div class="icon-box" style="margin: 0 auto 16px; background: var(--accent-gradient); color: white; border: none;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <div class="glass-card"
+                        style="background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3);">
+                        <div class="icon-box"
+                            style="margin: 0 auto 16px; background: var(--accent-gradient); color: white; border: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
                         </div>
                         <h3>Результат</h3>
-                        <p style="color: var(--text-muted); font-size: 14px; margin-top: 8px;">Лид в CRM, чек отправлен, менеджер получил push-уведомление</p>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-top: 8px;">Лид в CRM, чек отправлен,
+                            менеджер получил push-уведомление</p>
                     </div>
                 </div>
             </div>
@@ -681,7 +812,7 @@
                 <h2>Оцифрованная эффективность</h2>
                 <p>Результаты внедрения систем автоматизации на базе 50+ проектов.</p>
             </div>
-            
+
             <div class="results-grid" id="counters">
                 <div class="result-item reveal delay-1">
                     <div class="result-number"><span class="counter" data-target="60">0</span>%</div>
@@ -710,39 +841,74 @@
                 <h2>Что мы можем автоматизировать?</h2>
                 <p>Разгрузите команду от типовых задач прямо сейчас.</p>
             </div>
-            
+
             <div class="use-cases-grid">
                 <!-- 8 Cards -->
                 <div class="glass-card use-case-card reveal">
-                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg></div>
                     <h3>Обработка лидов</h3>
                 </div>
                 <div class="glass-card use-case-card reveal delay-1">
-                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg></div>
                     <h3>Автоответ клиентам</h3>
                 </div>
                 <div class="glass-card use-case-card reveal delay-2">
-                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"></path></svg></div>
+                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9">
+                            </path>
+                        </svg></div>
                     <h3>Отчеты в Telegram</h3>
                 </div>
                 <div class="glass-card use-case-card reveal delay-3">
-                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></div>
+                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="2" y1="10" x2="22" y2="10"></line>
+                        </svg></div>
                     <h3>Контроль оплат</h3>
                 </div>
                 <div class="glass-card use-case-card reveal">
-                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg></div>
                     <h3>HR автоматизация</h3>
                 </div>
                 <div class="glass-card use-case-card reveal delay-1">
-                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg></div>
+                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                            <line x1="12" y1="2" x2="12" y2="12"></line>
+                        </svg></div>
                     <h3>Поддержка клиентов</h3>
                 </div>
                 <div class="glass-card use-case-card reveal delay-2">
-                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg></div>
+                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18 17V9"></path>
+                            <path d="M13 17V5"></path>
+                            <path d="M8 17v-3"></path>
+                        </svg></div>
                     <h3>Маркетинг отчеты</h3>
                 </div>
                 <div class="glass-card use-case-card reveal delay-3">
-                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                    <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg></div>
                     <h3>Интеграция CRM</h3>
                 </div>
             </div>
@@ -756,21 +922,27 @@
                 <h2>Реальные трансформации</h2>
                 <p>Компании, которые уже перестали терять ресурсы на операционке.</p>
             </div>
-            
+
             <div class="case-card reveal">
                 <div>
-                    <div style="color: var(--accent-primary); font-weight: 600; margin-bottom: 8px;">E-commerce бренд</div>
-                    <h3 style="font-size: 28px; margin-bottom: 16px;">Автоматизация статусов доставки и работы с брошенными корзинами</h3>
-                    <p style="color: var(--text-muted);">Менеджеры вручную переносили данные трек-номеров и писали клиентам. Мы связали CMS, сервис логистики и WhatsApp-рассылки в единый процесс без участия человека.</p>
+                    <div style="color: var(--accent-primary); font-weight: 600; margin-bottom: 8px;">E-commerce бренд
+                    </div>
+                    <h3 style="font-size: 28px; margin-bottom: 16px;">Автоматизация статусов доставки и работы с
+                        брошенными корзинами</h3>
+                    <p style="color: var(--text-muted);">Менеджеры вручную переносили данные трек-номеров и писали
+                        клиентам. Мы связали CMS, сервис логистики и WhatsApp-рассылки в единый процесс без участия
+                        человека.</p>
                 </div>
                 <div>
                     <div class="glass-card" style="padding: 24px;">
                         <div style="margin-bottom: 16px;">
-                            <span style="color: #ef4444; font-weight: bold;">До:</span> <span style="color: var(--text-muted)">4 часа в день на статусы заказов, потеря заявок</span>
+                            <span style="color: #ef4444; font-weight: bold;">До:</span> <span
+                                style="color: var(--text-muted)">4 часа в день на статусы заказов, потеря заявок</span>
                         </div>
                         <div style="height: 1px; background: var(--glass-border); margin: 16px 0;"></div>
                         <div>
-                            <span style="color: #10b981; font-weight: bold;">После:</span> <span style="color: white">Полный автопилот, рост возврата корзин на 28%</span>
+                            <span style="color: #10b981; font-weight: bold;">После:</span> <span
+                                style="color: white">Полный автопилот, рост возврата корзин на 28%</span>
                         </div>
                     </div>
                 </div>
@@ -778,18 +950,22 @@
 
             <div class="case-card reveal">
                 <div>
-                    <div style="color: var(--accent-secondary); font-weight: 600; margin-bottom: 8px;">Онлайн-школа</div>
+                    <div style="color: var(--accent-secondary); font-weight: 600; margin-bottom: 8px;">Онлайн-школа
+                    </div>
                     <h3 style="font-size: 28px; margin-bottom: 16px;">Автовыдача доступов и система лояльности</h3>
-                    <p style="color: var(--text-muted);">Оплаты падали в разные места, кураторы руками открывали доступ на платформе, студенты ждали по 6 часов. Настроена автовыдача за 5 секунд после транзакции.</p>
+                    <p style="color: var(--text-muted);">Оплаты падали в разные места, кураторы руками открывали доступ
+                        на платформе, студенты ждали по 6 часов. Настроена автовыдача за 5 секунд после транзакции.</p>
                 </div>
                 <div>
                     <div class="glass-card" style="padding: 24px;">
                         <div style="margin-bottom: 16px;">
-                            <span style="color: #ef4444; font-weight: bold;">До:</span> <span style="color: var(--text-muted)">Недовольство учеников, человеческий фактор</span>
+                            <span style="color: #ef4444; font-weight: bold;">До:</span> <span
+                                style="color: var(--text-muted)">Недовольство учеников, человеческий фактор</span>
                         </div>
                         <div style="height: 1px; background: var(--glass-border); margin: 16px 0;"></div>
                         <div>
-                            <span style="color: #10b981; font-weight: bold;">После:</span> <span style="color: white">Доступ за 5 сек, 0 ошибок оплат, счастливые студенты</span>
+                            <span style="color: #10b981; font-weight: bold;">После:</span> <span
+                                style="color: white">Доступ за 5 сек, 0 ошибок оплат, счастливые студенты</span>
                         </div>
                     </div>
                 </div>
@@ -803,32 +979,37 @@
             <h2>Прозрачный процесс работы</h2>
             <p>От первичного созвона до полностью готовой системы автоматизации.</p>
         </div>
-        
+
         <div class="timeline">
             <div class="timeline-step reveal">
                 <div class="timeline-number">1</div>
                 <h3>Бесплатный аудит</h3>
-                <p style="color: var(--text-muted)">Анализируем ваши текущие процессы, находим узкие горлышки и потери времени. Составляем карту потенциала автоматизации (Roadmap).</p>
+                <p style="color: var(--text-muted)">Анализируем ваши текущие процессы, находим узкие горлышки и потери
+                    времени. Составляем карту потенциала автоматизации (Roadmap).</p>
             </div>
             <div class="timeline-step reveal">
                 <div class="timeline-number">2</div>
                 <h3>Проектирование</h3>
-                <p style="color: var(--text-muted)">Разрабатываем детальную логику связок, выбираем оптимальные сервисы для интеграции под ваш бюджет. Утверждаем архитектуру.</p>
+                <p style="color: var(--text-muted)">Разрабатываем детальную логику связок, выбираем оптимальные сервисы
+                    для интеграции под ваш бюджет. Утверждаем архитектуру.</p>
             </div>
             <div class="timeline-step reveal">
                 <div class="timeline-number">3</div>
                 <h3>Разработка и сборка</h3>
-                <p style="color: var(--text-muted)">Настраиваем API, вебхуки и сценарии. Собираем всё в единую надежную экосистему на серверах. Все тестируется в закрытой среде.</p>
+                <p style="color: var(--text-muted)">Настраиваем API, вебхуки и сценарии. Собираем всё в единую надежную
+                    экосистему на серверах. Все тестируется в закрытой среде.</p>
             </div>
             <div class="timeline-step reveal">
                 <div class="timeline-number">4</div>
                 <h3>Запуск и внедрение</h3>
-                <p style="color: var(--text-muted)">Плавно переводим процессы на новые рельсы. Обучаем команду, предоставляем инструкции. Вы сразу видите ускорение работы.</p>
+                <p style="color: var(--text-muted)">Плавно переводим процессы на новые рельсы. Обучаем команду,
+                    предоставляем инструкции. Вы сразу видите ускорение работы.</p>
             </div>
             <div class="timeline-step reveal">
                 <div class="timeline-number">5</div>
                 <h3>Техническая поддержка</h3>
-                <p style="color: var(--text-muted)">Мы не бросаем проект. Мониторим стабильность системы 24/7, обновляем связки при изменениях API сервисов и помогаем масштабировать дальше.</p>
+                <p style="color: var(--text-muted)">Мы не бросаем проект. Мониторим стабильность системы 24/7, обновляем
+                    связки при изменениях API сервисов и помогаем масштабировать дальше.</p>
             </div>
         </div>
     </section>
@@ -844,34 +1025,52 @@
             <div class="security-grid">
                 <div class="glass-card security-card reveal">
                     <div class="icon-box">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"
+                            stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
                     </div>
                     <h3>Безопасность данных</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 12px;">Используем современные стандарты шифрования. API ключи хранятся в защищенной среде среды исполнения.</p>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 12px;">Используем современные
+                        стандарты шифрования. API ключи хранятся в защищенной среде среды исполнения.</p>
                 </div>
-                
+
                 <div class="glass-card security-card reveal delay-1">
                     <div class="icon-box">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
                     </div>
                     <h3>Контроль доступа</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 12px;">Настраиваем строгие права. Никто кроме вас не получит доступ к клиентским базам или финансовой информации.</p>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 12px;">Настраиваем строгие права.
+                        Никто кроме вас не получит доступ к клиентским базам или финансовой информации.</p>
                 </div>
 
                 <div class="glass-card security-card reveal delay-2">
                     <div class="icon-box">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"
+                            stroke-width="2">
+                            <polyline points="1 4 1 10 7 10"></polyline>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                        </svg>
                     </div>
                     <h3>Резервные копии</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 12px;">Автоматическое логирование процессов. В случае сбоя внешнего сервиса, алгоритм повторит задачу позже.</p>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 12px;">Автоматическое логирование
+                        процессов. В случае сбоя внешнего сервиса, алгоритм повторит задачу позже.</p>
                 </div>
 
                 <div class="glass-card security-card reveal delay-3">
                     <div class="icon-box">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"
+                            stroke-width="2">
+                            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+                        </svg>
                     </div>
                     <h3>Масштабируемость</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 12px;">Архитектура выдержит кратный рост бизнеса. Будь у вас 10 заявок в день или 10 000 — система отработает всё.</p>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-top: 12px;">Архитектура выдержит кратный
+                        рост бизнеса. Будь у вас 10 заявок в день или 10 000 — система отработает всё.</p>
                 </div>
             </div>
         </div>
@@ -882,36 +1081,48 @@
         <div class="section-header reveal">
             <h2>Ответы на частые вопросы</h2>
         </div>
-        
+
         <div class="faq-list reveal">
             <div class="faq-item">
                 <div class="faq-question">Какие программы вы можете связать? <span class="faq-icon">+</span></div>
                 <div class="faq-answer">
-                    Мы можем интегрировать любые сервисы, у которых есть API. Это популярные CRM (amoCRM, Bitrix24), мессенджеры (Telegram, WhatsApp), почтовые сервисы, Google Таблицы, онлайн-кассы и платформы вроде GetCourse или Tilda. В 99% случаев любую облачную программу можно автоматизировать.
+                    Мы можем интегрировать любые сервисы, у которых есть API. Это популярные CRM (amoCRM, Bitrix24),
+                    мессенджеры (Telegram, WhatsApp), почтовые сервисы, Google Таблицы, онлайн-кассы и платформы вроде
+                    GetCourse или Tilda. В 99% случаев любую облачную программу можно автоматизировать.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Что если система сломается или будет сбой? <span class="faq-icon">+</span></div>
+                <div class="faq-question">Что если система сломается или будет сбой? <span class="faq-icon">+</span>
+                </div>
                 <div class="faq-answer">
-                    Мы закладываем логику обработки ошибок. Если сторонний сервис (например, сервер почты) временно "упал", автоматизация ставит задачу в очередь и повторяет ее после восстановления связи. Ни одна заявка не потеряется. Кроме того, мы предлагаем поддержку.
+                    Мы закладываем логику обработки ошибок. Если сторонний сервис (например, сервер почты) временно
+                    "упал", автоматизация ставит задачу в очередь и повторяет ее после восстановления связи. Ни одна
+                    заявка не потеряется. Кроме того, мы предлагаем поддержку.
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Сколько времени занимает внедрение? <span class="faq-icon">+</span></div>
                 <div class="faq-answer">
-                    От 1 до 4 недель в зависимости от сложности процессов. Простая связка "сайт → CRM + уведомление в Telegram" делается за несколько дней. Сложные бизнес-процессы с многоуровневой логикой требуют больше времени на архитектуру и тесты.
+                    От 1 до 4 недель в зависимости от сложности процессов. Простая связка "сайт → CRM + уведомление в
+                    Telegram" делается за несколько дней. Сложные бизнес-процессы с многоуровневой логикой требуют
+                    больше времени на архитектуру и тесты.
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Нужно ли мне нанимать программиста для поддержки? <span class="faq-icon">+</span></div>
+                <div class="faq-question">Нужно ли мне нанимать программиста для поддержки? <span
+                        class="faq-icon">+</span></div>
                 <div class="faq-answer">
-                    Нет. Мы используем современные no-code и low-code решения, которые не требуют знания кода для понимания. После внедрения мы проводим обучение и отдаем вам документацию. Если процесс изменится, вы сможете сами внести мелкие правки или обратиться к нашей поддержке.
+                    Нет. Мы используем современные no-code и low-code решения, которые не требуют знания кода для
+                    понимания. После внедрения мы проводим обучение и отдаем вам документацию. Если процесс изменится,
+                    вы сможете сами внести мелкие правки или обратиться к нашей поддержке.
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Окупятся ли вложения в автоматизацию? <span class="faq-icon">+</span></div>
                 <div class="faq-answer">
-                    В среднем наши клиенты окупают инвестиции за 1–3 месяца. Вы экономите на найме дополнительных менеджеров для рутинной работы, перестаете терять лиды (которые тоже стоят маркетинговых бюджетов) и повышаете скорость допродаж за счет быстрых ответов клиенту.
+                    В среднем наши клиенты окупают инвестиции за 1–3 месяца. Вы экономите на найме дополнительных
+                    менеджеров для рутинной работы, перестаете терять лиды (которые тоже стоят маркетинговых бюджетов) и
+                    повышаете скорость допродаж за счет быстрых ответов клиенту.
                 </div>
             </div>
         </div>
@@ -921,9 +1132,13 @@
     <section class="final-cta" id="audit">
         <div class="final-cta-bg"></div>
         <div class="container reveal">
-            <h2 style="font-size: clamp(36px, 5vw, 56px); margin-bottom: 24px;">Готовы перестать терять время<br>и деньги на рутину?</h2>
-            <p style="font-size: 20px; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px;">Запишитесь на бесплатный аудит. Мы разберем ваши процессы и покажем, где вы можете сэкономить до 60% времени команды уже через 2 недели.</p>
-            <a href="#" class="btn btn-primary pulse-btn" style="padding: 20px 48px; font-size: 18px;">Получить бесплатный аудит</a>
+            <h2 style="font-size: clamp(36px, 5vw, 56px); margin-bottom: 24px;">Готовы перестать терять время<br>и
+                деньги на рутину?</h2>
+            <p style="font-size: 20px; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px;">Запишитесь на
+                бесплатный аудит. Мы разберем ваши процессы и покажем, где вы можете сэкономить до 60% времени команды
+                уже через 2 недели.</p>
+            <a href="#" class="btn btn-primary pulse-btn" style="padding: 20px 48px; font-size: 18px;">Получить
+                бесплатный аудит</a>
         </div>
     </section>
 
@@ -955,12 +1170,12 @@
             entries.forEach(entry => {
                 if (!entry.isIntersecting) return;
                 entry.target.classList.add('active');
-                
+
                 // If this is the counters section, trigger counting
                 if (entry.target.id === 'counters' || entry.target.querySelector('.counter')) {
                     startCounters(entry.target);
                 }
-                
+
                 observer.unobserve(entry.target);
             });
         }, revealOptions);
@@ -973,13 +1188,13 @@
             if (countersRan) return;
             const counters = container.querySelectorAll('.counter') || document.querySelectorAll('.counter');
             if (counters.length === 0) return;
-            
+
             countersRan = true;
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 const duration = 2000; // ms
                 const increment = target / (duration / 16); // 60fps
-                
+
                 let current = 0;
                 const updateCounter = () => {
                     current += increment;
@@ -1000,7 +1215,7 @@
             const question = item.querySelector('.faq-question');
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                
+
                 // Close all
                 faqItems.forEach(i => {
                     i.classList.remove('active');
@@ -1017,4 +1232,5 @@
         });
     </script>
 </body>
+
 </html>
